@@ -1,5 +1,5 @@
 schema: lovstudio/skill-card/v1
-version: "0.2.0"
+version: "0.3.0"
 description: "把用户对 Agent 的情绪与判断记成可统计的反馈事件，按最小作用域迭代规则，并输出满意度复盘。"
 owner:
   team: LovStudio

@@ -1,6 +1,5 @@
 ---
 name: lov-feedback-loop
-version: "0.2.0"
 description: >
   把用户对 Agent 的被动情绪与主动点赞、点踩、评分变成可统计的反馈事件，
   按任务、技能、规则、全局 Prompt 的最小作用域迭代，并生成满意度复盘报告。
@@ -12,7 +11,7 @@ depends_on:
   - lov-branding-consistency
 metadata:
   author: LovStudio
-  version: "0.2.0"
+  version: "0.3.0"
   card_standard: lovstudio/skill-card/v1
   content_class: deterministic-output
   tags:
@@ -30,18 +29,6 @@ metadata:
 自动链路（情绪感知 → 落账 → 规则迭代）不经过 skill 路由，由根 Prompt 的
 反馈与迭代规则加上 `references/protocol.md` 直接驱动；本 Skill 提供主动入口，
 同时为自动链路提供协议与脚本。
-
-## 加密交付下的运行方式
-
-本 Skill 以加密包分发：磁盘上的 `scripts/*.py`、`references/*.md` 与 `assets/*` 都是密文，
-不能直接按路径读取或执行。
-
-- 运行脚本：`uvx lovstudio-skill-helper exec feedback-loop scripts/feedback_store.py <参数...>`
-- 读取引用：`uvx lovstudio-skill-helper decrypt feedback-loop references/protocol.md`
-- 下文所有 `python3 scripts/xxx.py ...` 示例，实际执行时替换成
-  `uvx lovstudio-skill-helper exec feedback-loop scripts/xxx.py ...`；
-  所有 `references/...` 与 `assets/...` 都用 `decrypt` 取回后再读。
-- 首次使用先激活：`npx lovstudio license <license-key>`（或 `uvx lovstudio-skill-helper login`）。
 
 ## Triggers
 

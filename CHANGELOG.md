@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 — 2026-09-11
+
+- 改为免费公开发布：移除加密交付适配（`src/` + `public/` 布局、占位说明与 `exec` 运行指引），
+  恢复扁平 Skill 目录，源码公开在 `lovstudio/feedback-loop-skill`。
+- 安装方式统一为 `npx lovstudio skills add feedback-loop`，无需登录与 Credits 兑换。
+- 安装脚本保留内嵌托管块兜底，被单独复制或经工具执行时仍可用。
+
 ## 0.2.0 — 2026-09-11
 
 - 转为加密付费交付：`src/` 为真源、`public/` 为占位与密文包；SKILL.md 增加加密运行说明

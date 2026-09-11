@@ -47,7 +47,7 @@ Markdown、自包含 HTML、JSON 三种格式的满意度报告，以及宿主�
 
 ## Skill Version
 
-0.2.0
+0.3.0
 
 ## Ethical Considerations
 

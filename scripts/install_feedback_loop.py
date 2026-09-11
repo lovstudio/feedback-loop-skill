@@ -17,7 +17,7 @@ BEGIN_RE = re.compile(r"<!--\s*feedback-loop:begin[^>]*-->")
 END_MARKER = "<!-- feedback-loop:end -->"
 SKILL_NAME = "lov-feedback-loop"
 
-# 加密分发时 assets/ 是密文，脚本单文件运行时读不到它。
+# 脚本单文件运行时（例如被复制到别处或经 exec 执行）读不到 assets/。
 # 这里是同一份托管块的内嵌副本；assets/system-prompt-block.md 仍是真源，
 # 两者不一致时以 assets 文件为准（发布前保持同步）。
 FALLBACK_BLOCK = """<!-- feedback-loop:begin v1 -->
